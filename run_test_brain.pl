@@ -4,7 +4,7 @@
 
 
 :- use_module(library(clpr)).
-:- use_module(clpfba).
+:- use_module(clpfba_no_opt).
 
 
 run_test_brain :-
