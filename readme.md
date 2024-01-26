@@ -27,7 +27,11 @@ The equations underlying FBA can be interpreted as a constraint satisfaction pro
 
 The sampling algorithm is implemented by combining constraint propagation as an instance of forward-checking [14] with random sampling, using the simplest possible scheme (i.e. uniform random) of variable and value ordering [15, 16]. The method can be viewed as a hybridization of pure Monte Carlo methods (see, for example, [17]). However, contrary to Monte Carlo methods, in our approach an individual sample in the *n*-dimensional space is generated in n successive steps. The idea is to estimate distributions of fluxes by applying repeated random sampling while benefiting from CLP to reduce the sample space into a sharp enclosure of the region of integration (see below). This feature guarantees that random values always fall inside the relevant variable domains.
 
-Specifically, given the sequence of fluxes $j=j_1,...,j_n$, the algorithm proceeds as follows:
+Specifically, given the sequence of fluxes 
+
+$$j = j_1,...,j_n$$
+
+the algorithm proceeds as follows:
 
 - Determine the initial flux domains $D_1,...,D_n \subseteq R$ so that $j_1 \in D_1,...,j_n \in D_n$ by building the initial constraint store from the mass-balance equations of the metabolic network stoichiometry.
 - Run an iterative procedure to generate a sample through successive bindings. A sample is an element $s \in D_1 \times ... \times D_n$ that is also a solution if satisfies all given constraints. For each iteration:
