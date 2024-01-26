@@ -48,7 +48,7 @@ CLPR uses constraint-handling rules (CHR) [19] in order to rewrite the set of co
 
 As an example, consider the following constraint involving 3 fluxes:
 
-$$j_1+j_2-j_3=0$$
+$$j_1 + j_2 - j_3 = 0$$
 
 The domain of each flux is pruned using the following contracting operators (e.g., rules) of interval arithmetics:
 
